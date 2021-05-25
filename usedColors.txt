@@ -1,0 +1,11 @@
+//// -- DEFAULT
+color: #044862 / white
+border: #427AA1
+background: #EBF2FA
+
+//// -- HOVER
+color: #044862
+border: #F07D19
+background: #FFD972
+
+https://coolors.co/044862-427aa1-ebf2fa-ffd972-f07d19

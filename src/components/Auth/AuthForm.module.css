@@ -1,0 +1,117 @@
+.auth {
+  margin: 1em auto;
+  width: 95%;
+  max-width: 90%;
+  border-radius: 0.25em;
+  background-color: #ebf2fa;
+  border: 0.25em double #427aa1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+}
+
+.horizontal_line {
+  margin: 0 auto 2em auto;
+  color: rgba(66, 121, 161, 0.35);
+  width: 60%;
+}
+
+.control {
+  margin-bottom: 0.5rem;
+}
+
+.control label {
+  display: block;
+  color: #044862;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+.control input {
+  font-size: 1.25em;
+  background-color: white;
+  color: #044862;
+  border-radius: 4px;
+  border: 1px solid #044862;
+  width: 90%;
+  max-width: 400px;
+  text-align: left;
+  padding: 0.25rem;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions button {
+  margin-top: 1em;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  color: white;
+  background-color: #044862;
+  border: 1px solid #044862;
+  border-radius: 0.25em;
+  padding: 0.75rem 2.5rem;
+}
+
+.actions button:hover {
+  color: #044862;
+  background-color: #ffd972;
+  border-color: #f07d19;
+}
+
+.line {
+  display: block;
+  margin-top: 1.5em;
+  width: 100%;
+  color: #bcd3f2;
+}
+
+.register {
+  padding-top: 2em;
+}
+.register > a {
+  color: #395c6b;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.125em;
+}
+.register > a:hover {
+  color: #f07d19;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 1.55em;
+  min-height: 1em;
+  max-height: 1em;
+}
+
+.footer {
+  padding-top: 0.5em;
+  text-align: center;
+  font-size: 0.75em;
+  color: grey;
+}
+
+.tradeLogo {
+  vertical-align: super;
+}
+
+@media (max-width: 640px) {
+  .actions button,
+  .error {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 420px) {
+  .control input {
+    font-size: 2em;
+  }
+}

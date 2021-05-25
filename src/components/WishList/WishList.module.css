@@ -1,0 +1,123 @@
+.wishList {
+  width: 90%;
+  margin: 1em auto 0 auto;
+  padding: 1em 0;
+  color: rgb(25, 25, 25);
+  background-color: #ebf2fa;
+  border-radius: 6px;
+  border: 4px double #427aa1;
+}
+
+.wishList > p {
+  display: block;
+  width: 80%;
+  margin: 0.5em auto;
+}
+.wishList > p:nth-child(2) {
+  padding-bottom: 2em;
+}
+
+li {
+  width: 85%;
+  background-color: white;
+  list-style: none;
+  padding: 1.25em;
+  margin: 1.25em auto;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+li:hover,
+li:focus {
+  background-image: linear-gradient(white, white, #ffd9726c);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.wishElement {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #044862;
+}
+
+.wishElement > span > p {
+  font-size: 1.125em;
+  margin-top: 0.5em;
+}
+
+.deleteButton {
+  width: 5em;
+  height: 5em;
+  background-color: #044862;
+  border-radius: 0.5em;
+  border: 1px solid #044862;
+  margin: auto 0;
+  padding: 1em;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.deleteButton:hover,
+.deleteButton:focus {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  background-color: #ffd972;
+  color: #044862;
+  border-color: #f07d19;
+}
+
+.trashBinIcon {
+  pointer-events: none;
+  font-size: 3em;
+}
+
+.newWish {
+  margin: 0 auto;
+  padding: 0;
+  width: 15%;
+}
+.newWish a {
+  border: 1px solid #044862;
+  border-radius: 0.5em;
+  color: #ebf2fa;
+  margin: 0;
+  display: block;
+  text-decoration: none;
+  font-weight: 900;
+  text-align: center;
+  padding: 0.5em 0;
+  background-color: #044862;
+}
+
+.newWish a:hover,
+.newWish a:focus {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  background-color: #ffd972;
+  color: #044862;
+  border-color: #f07d19;
+}
+
+@media (max-width: 480px) {
+  li {
+    font-size: 1.5em;
+  }
+
+  .deleteButton {
+    display: block;
+    width: 4em;
+    height: 4em;
+    padding: 0;
+  }
+
+  .trashBinIcon {
+    font-size: 2.5em;
+  }
+
+  .wishElement {
+    width: 92%;
+    padding: 0.5em;
+  }
+
+  .wishElement > div > p {
+    font-size: 1.25em;
+    margin: 0.25em 0;
+  }
+}

@@ -1,0 +1,92 @@
+.addWish > h2 {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 2em;
+}
+
+.addWish {
+  width: 90%;
+  margin: 0 auto;
+  color: #044862;
+  border-radius: 0.25em;
+  background-color: #ebf2fa;
+  border: 4px double #427aa1;
+}
+
+.addWish > label,
+.wishInput {
+  width: 80%;
+  display: block;
+  margin: 0.5em auto;
+  font-size: 1.25em;
+}
+
+.wishInput {
+  border-radius: 0.25em;
+  border: 1px solid #044862;
+
+  padding: 0.5em;
+  max-width: 500px;
+}
+
+.addWish > label {
+  font-weight: 600;
+  padding-left: 20%;
+}
+
+.buttonContainer {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.submitButton,
+.cancelButton {
+  width: 40%;
+  font-weight: 600;
+  font-size: 1.25em;
+  padding: 0.5em;
+  margin: 2em auto;
+  border-radius: 0.25em;
+  cursor: pointer;
+  border: 1px solid #044862;
+}
+
+.submitButton {
+  color: white;
+  background-color: #044862;
+}
+
+.cancelButton {
+  color: #044862;
+  background-color: #ebf2fa;
+}
+
+.submitButton:hover {
+  color: #044862;
+  background-color: #ffd972;
+  border-color: #f07d19;
+}
+
+.cancelButton:hover {
+  background-color: #ffd972;
+}
+
+@media only screen and (max-width: 1200px) {
+  .addWish > label {
+    padding-left: 18%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .addWish > label {
+    padding-left: 10%;
+  }
+
+  .submitButton,
+  .cancelButton {
+    width: 47%;
+    font-size: 1.5em;
+    padding: 0.5em 0.25em;
+  }
+}

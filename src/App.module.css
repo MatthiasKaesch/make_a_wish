@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.app {
+  max-width: 960px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+p,
+input,
+label,
+button {
+  font-family: 'Verdana', sans-serif !important ;
+}
+
+h1 {
+  font-size: 5em;
+  font-weight: 900;
+
+  text-align: center;
+
+  margin: 0.125em 0 0 0;
+
+  color: transparent;
+  background-image: linear-gradient(#21658d, #21658d, #bbcad3);
+  text-shadow: 3px 4px 6px rgba(255, 255, 255, 0.55);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+h1 > span {
+  font-weight: 600;
+}
+
+.buttons {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em 0;
+}
+
+.buttons > button {
+  width: 30%;
+  height: 10vh;
+  font-size: 2em;
+}
+
+.addWish > label > button {
+  display: flex;
+  margin: 0.25em auto 0 auto;
+  font-size: 1.25em;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 1%;
+  width: 100%;
+}
+
+#addWish {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#addWish > label > input {
+  width: 100%;
+  margin: 0.25em 0;
+  font-size: 1.25em;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 0.8em;
+  }
+
+  .app {
+    width: 100%;
+  }
+
+  hr {
+    display: none;
+  }
+
+  label {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 420px) {
+  html {
+    font-size: 0.53em;
+  }
+  label {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 3em;
+  }
+  button {
+    color: red;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 0.5em;
+  }
+}

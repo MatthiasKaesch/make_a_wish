@@ -1,0 +1,36 @@
+.navigation > ul {
+  width: 94%;
+  display: flex;
+  padding: 0;
+  background-color: #66a182;
+  margin: 0 auto;
+}
+
+.navigation > ul > li {
+  text-align: center;
+  padding: 0;
+  max-width: 33%;
+  border-radius: 0.125em;
+}
+
+.navigation a {
+  display: inline-block;
+  width: 100%;
+  line-height: 2em;
+  color: rgb(25, 25, 25);
+  font-weight: bold;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.navigation hr {
+  margin: 1em auto;
+  color: rgb(245, 245, 245);
+  width: 94%;
+}
+
+@media only screen and (max-width: 640px) {
+  .navigation > ul {
+    width: 100%;
+  }
+}

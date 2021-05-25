@@ -1,0 +1,80 @@
+.profile {
+  margin: 1em auto;
+  width: 95%;
+  max-width: 90%;
+  border-radius: 0.25em;
+  background-color: #ebf2fa;
+  border: 0.25em double #427aa1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: left;
+}
+
+.heading {
+  text-align: center;
+  margin: 0.5em 0;
+  color: #044862;
+}
+
+.profile > hr {
+  color: rgba(4, 71, 98, 0.4);
+  width: 90%;
+  margin: 2em auto;
+}
+
+.profile > p {
+  display: block;
+  width: 50%;
+  margin: 0.5em auto;
+}
+
+.userData {
+  font-weight: 600;
+}
+
+.show {
+  display: block;
+  text-align: center;
+  min-height: 1.25em;
+  margin-top: 1em;
+  font-weight: 600;
+  color: rgb(156, 1, 1);
+}
+
+.hide {
+  display: block;
+  text-align: center;
+  min-height: 1.25em;
+  margin-top: 1em;
+  font-weight: 600;
+  color: rgb(25, 25, 25);
+}
+
+.privacyButton {
+  display: block;
+  width: 8em;
+  margin: 0 auto;
+  font-size: 1.25em;
+}
+
+.cancelButton {
+  margin-left: 85%;
+  font-size: 1.5em;
+}
+
+.profile button {
+  margin-top: 1em;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  color: white;
+  background-color: #044862;
+  border: 1px solid #044862;
+  border-radius: 0.25em;
+  padding: 0.75rem 2.5rem;
+}
+.profile button:hover {
+  color: #044862;
+  background-color: #ffd972;
+  border-color: #f07d19;
+}

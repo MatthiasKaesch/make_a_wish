@@ -1,0 +1,108 @@
+.auth {
+  margin: 1em auto;
+  width: 95%;
+  max-width: 90%;
+  border-radius: 0.25em;
+  background-color: #ebf2fa;
+  border: 0.25em double #427aa1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+}
+
+.line {
+  margin-top: 0.75em;
+  color: rgba(66, 121, 161, 0.35);
+}
+
+.auth h2 {
+  text-align: center;
+  color: #044862;
+  margin-bottom: 1em;
+}
+
+.control {
+  margin: 0 auto 0.5em auto;
+  width: 80%;
+}
+
+.control label {
+  display: block;
+  width: 85%;
+  max-width: 400px;
+  margin: 0.75em auto 0.25em auto;
+  color: #044862;
+  text-align: left;
+  font-weight: bold;
+}
+
+.control input {
+  font-size: 1.25em;
+  background-color: white;
+  color: #044862;
+  border-radius: 4px;
+  border: 1px solid #044862;
+  width: 90%;
+  max-width: 400px;
+  text-align: left;
+}
+
+.actions {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions button {
+  margin: 1em;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  color: white;
+  background-color: #044862;
+  border: 1px solid #044862;
+  border-radius: 0.25em;
+  padding: 0.75rem 2.5rem;
+}
+
+.actions button:hover {
+  color: #044862;
+  background-color: #ffd972;
+  border-color: #f07d19;
+}
+
+.actions > div > a:nth-child(2) > button {
+  color: #044862;
+  background-color: #ebf2fa;
+  border: 1px solid #044862;
+}
+
+.actions > div > a:nth-child(2) > button:hover {
+  background-color: #ffd972;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 1.55em;
+  min-height: 1em;
+  max-height: 1em;
+}
+
+@media (max-width: 640px) {
+  .actions button,
+  .error {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: 4.5em;
+    margin: 0 0 0.25em 0;
+  }
+  .control input {
+    font-size: 2em;
+  }
+}
