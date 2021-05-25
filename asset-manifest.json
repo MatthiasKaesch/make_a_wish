@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/make_a_wish/static/css/main.20d98218.chunk.css",
+    "main.js": "/make_a_wish/static/js/main.2d06abfb.chunk.js",
+    "main.js.map": "/make_a_wish/static/js/main.2d06abfb.chunk.js.map",
+    "runtime-main.js": "/make_a_wish/static/js/runtime-main.0cd0d700.js",
+    "runtime-main.js.map": "/make_a_wish/static/js/runtime-main.0cd0d700.js.map",
+    "static/js/2.101fb366.chunk.js": "/make_a_wish/static/js/2.101fb366.chunk.js",
+    "static/js/2.101fb366.chunk.js.map": "/make_a_wish/static/js/2.101fb366.chunk.js.map",
+    "static/css/3.8a7477f1.chunk.css": "/make_a_wish/static/css/3.8a7477f1.chunk.css",
+    "static/js/3.bb1ab115.chunk.js": "/make_a_wish/static/js/3.bb1ab115.chunk.js",
+    "static/js/3.bb1ab115.chunk.js.map": "/make_a_wish/static/js/3.bb1ab115.chunk.js.map",
+    "static/css/4.c4ace686.chunk.css": "/make_a_wish/static/css/4.c4ace686.chunk.css",
+    "static/js/4.91a2bf2b.chunk.js": "/make_a_wish/static/js/4.91a2bf2b.chunk.js",
+    "static/js/4.91a2bf2b.chunk.js.map": "/make_a_wish/static/js/4.91a2bf2b.chunk.js.map",
+    "static/css/5.f5b8486b.chunk.css": "/make_a_wish/static/css/5.f5b8486b.chunk.css",
+    "static/js/5.52578e33.chunk.js": "/make_a_wish/static/js/5.52578e33.chunk.js",
+    "static/js/5.52578e33.chunk.js.map": "/make_a_wish/static/js/5.52578e33.chunk.js.map",
+    "static/js/6.2fb59612.chunk.js": "/make_a_wish/static/js/6.2fb59612.chunk.js",
+    "static/js/6.2fb59612.chunk.js.map": "/make_a_wish/static/js/6.2fb59612.chunk.js.map",
+    "index.html": "/make_a_wish/index.html",
+    "static/css/3.8a7477f1.chunk.css.map": "/make_a_wish/static/css/3.8a7477f1.chunk.css.map",
+    "static/css/4.c4ace686.chunk.css.map": "/make_a_wish/static/css/4.c4ace686.chunk.css.map",
+    "static/css/5.f5b8486b.chunk.css.map": "/make_a_wish/static/css/5.f5b8486b.chunk.css.map",
+    "static/css/main.20d98218.chunk.css.map": "/make_a_wish/static/css/main.20d98218.chunk.css.map",
+    "static/js/2.101fb366.chunk.js.LICENSE.txt": "/make_a_wish/static/js/2.101fb366.chunk.js.LICENSE.txt",
+    "static/js/6.2fb59612.chunk.js.LICENSE.txt": "/make_a_wish/static/js/6.2fb59612.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0cd0d700.js",
+    "static/js/2.101fb366.chunk.js",
+    "static/css/main.20d98218.chunk.css",
+    "static/js/main.2d06abfb.chunk.js"
+  ]
+}
