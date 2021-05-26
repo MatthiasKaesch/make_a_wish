@@ -90,7 +90,7 @@ function App() {
   return (
     <main>
       <div className={classes.app}>
-        <Route path="/">
+        <Route path="/make_a_wish">
           <Redirect to="/login" />
         </Route>
         <Suspense fallback={<p>Loading...</p>}>
