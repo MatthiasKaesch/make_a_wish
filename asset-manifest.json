@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/make_a_wish/static/css/main.20d98218.chunk.css",
-    "main.js": "/make_a_wish/static/js/main.12d89dbd.chunk.js",
-    "main.js.map": "/make_a_wish/static/js/main.12d89dbd.chunk.js.map",
+    "main.js": "/make_a_wish/static/js/main.364d1270.chunk.js",
+    "main.js.map": "/make_a_wish/static/js/main.364d1270.chunk.js.map",
     "runtime-main.js": "/make_a_wish/static/js/runtime-main.7c79c87f.js",
     "runtime-main.js.map": "/make_a_wish/static/js/runtime-main.7c79c87f.js.map",
     "static/js/2.9c6c47ed.chunk.js": "/make_a_wish/static/js/2.9c6c47ed.chunk.js",
@@ -30,6 +30,6 @@
     "static/js/runtime-main.7c79c87f.js",
     "static/js/2.9c6c47ed.chunk.js",
     "static/css/main.20d98218.chunk.css",
-    "static/js/main.12d89dbd.chunk.js"
+    "static/js/main.364d1270.chunk.js"
   ]
 }
