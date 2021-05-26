@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter as Router } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 import './index.css';
 import App from './App.js';
@@ -11,9 +11,9 @@ ReactDOM.render(
   <AuthContextProvider>
     <React.StrictMode>
       <GoogleFont />
-      <Router>
+      <HashRouter>
         <App />
-      </Router>
+      </HashRouter>
     </React.StrictMode>
   </AuthContextProvider>,
   document.getElementById('root')
