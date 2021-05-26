@@ -8,15 +8,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-    <script>
-      (function () {
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect != location.href) {
-          history.replaceState(null, null, redirect);
-        }
-      })();
-    </script>
+
     <!-- <script type="text/javascript">
       // Single Page Apps for GitHub Pages
       // MIT License
@@ -54,6 +46,26 @@
     <title>MAKE a WISH</title>
   </head>
   <body>
+    <script>
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+          // REMOVE THIS - just showing the redirect route in the UI
+          document.body.setAttribute(
+            'message',
+            'This page was redirected by 404.html, from the route: ' + redirect
+          );
+        } else {
+          // REMOVE THIS - just showing the redirect route in the UI
+          document.body.setAttribute(
+            'message',
+            'This page was loaded directly from the index.html file'
+          );
+        }
+      })();
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
