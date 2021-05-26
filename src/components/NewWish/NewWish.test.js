@@ -2,45 +2,38 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import NewWish from './NewWish';
 
-describe('<NewWish /> HTML Test', () => {
-  test('Renders "New Wish" as <h2>', () => {
-    // Arrange
+describe('<NewWish /> Component', () => {
+  test('renders "New Wish" as <h2>', () => {
     render(<NewWish />);
-
-    // Act
-    // ..nothing here for now
-
-    //Assert
-
-    const headerElement = screen.getByText('New Wish', { exact: false });
+    const headerElement = screen.getByText('New Wish', { exact: true });
     expect(headerElement).toBeInTheDocument();
   });
 
-  test('Renders "Title" as <label>', () => {
+  test('renders "Title" as <label>', () => {
     render(<NewWish />);
-    const labelElement = screen.getByText('Title', { exact: false });
+    const labelElement = screen.getByText('Title', { exact: true });
     expect(labelElement).toBeInTheDocument();
   });
 
-  test('Renders "Price" as <label>', () => {
+  test('renders "Price" as <label>', () => {
     render(<NewWish />);
-    const labelElement = screen.getByText('Price', { exact: false });
+    const labelElement = screen.getByText('Price', { exact: true });
     expect(labelElement).toBeInTheDocument();
   });
 
-  test('Renders "Share With" as <label>', () => {
+  test('renders "Share With" as <label>', () => {
     render(<NewWish />);
-    const labelElement = screen.getByText('Share With', { exact: false });
+    const labelElement = screen.getByText('Share With', { exact: true });
     expect(labelElement).toBeInTheDocument();
   });
 
-  test('Renders "Make a Wish" as <button>', () => {
+  test('renders "Make a Wish" as <button>', () => {
     render(<NewWish />);
-    const buttonElement = screen.getByText('Share With', { exact: false });
+    const buttonElement = screen.getByText('Share With', { exact: true });
     expect(buttonElement).toBeInTheDocument();
   });
 
-  test('Renders "Cancel" as <button>', () => {
+  test('renders "Cancel" as <button>', () => {
     render(<NewWish />);
     const buttonElement = screen.getByText('Cancel', { exact: false });
     expect(buttonElement).toBeInTheDocument();

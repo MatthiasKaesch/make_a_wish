@@ -1,5 +1,5 @@
 import React, { Suspense, useCallback, useState, useEffect } from 'react';
-import { HashRouter, Route, Redirect } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import classes from './App.module.css';
 
 import Auth from './components/Auth/AuthForm';
@@ -90,39 +90,37 @@ function App() {
   return (
     <main>
       <div className={classes.app}>
-        <HashRouter>
-          <Route path="">
-            <Redirect to="/login" />
+        <Route path="">
+          <Redirect to="/login" />
+        </Route>
+        <Suspense fallback={<p>Loading...</p>}>
+          <Route path="/login">
+            <Auth onPassUid={onPassUidHandler} />
           </Route>
-          <Suspense fallback={<p>Loading...</p>}>
-            <Route path="/login">
-              <Auth onPassUid={onPassUidHandler} />
-            </Route>
-            <Route path="/profile">
-              <MainNavigation />
-              <Profile uid={uid} />
-            </Route>
-            {/*  <Route path="/friendList">
+          <Route path="/profile">
+            <MainNavigation />
+            <Profile uid={uid} />
+          </Route>
+          {/*  <Route path="/friendList">
             <MainNavigation />
             <FriendList friends={friends} />
           </Route> */}
-            <Route path="/register">
-              <Register onPassUid={onPassUidHandler} />
+          <Route path="/register">
+            <Register onPassUid={onPassUidHandler} />
+          </Route>
+          {!isLoading && !error && (
+            <Route path="/my_wishlist">
+              <MainNavigation />
+              <WishList onRemoveWish={wishDeleteHandler} wishes={wishes} />
             </Route>
-            {!isLoading && !error && (
-              <Route path="/my_wishlist">
-                <MainNavigation />
-                <WishList onRemoveWish={wishDeleteHandler} wishes={wishes} />
-              </Route>
-            )}
-            {!isLoading && !error && (
-              <Route path="/new_wish">
-                <MainNavigation />
-                <NewWish onAddWish={wishAddHandler} />
-              </Route>
-            )}
-          </Suspense>
-        </HashRouter>
+          )}
+          {!isLoading && !error && (
+            <Route path="/new_wish">
+              <MainNavigation />
+              <NewWish onAddWish={wishAddHandler} />
+            </Route>
+          )}
+        </Suspense>
       </div>
     </main>
   );
