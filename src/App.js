@@ -3,7 +3,7 @@ import { Route, Redirect } from 'react-router-dom';
 import classes from './App.module.css';
 
 import Auth from './components/Auth/AuthForm';
-import Register from './components/Register/RegisterForm';
+import Register from './components/Register/RegisterForm.jsx';
 import Profile from './components/Profile/Profile'; /* 
 import FriendList from './components/FriendList/FriendList'; */
 
