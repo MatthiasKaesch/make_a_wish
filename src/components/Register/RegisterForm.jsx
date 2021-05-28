@@ -4,6 +4,8 @@ import { useHistory, Link } from 'react-router-dom';
 import AuthContext from '../../store/auth-context';
 import classes from './RegisterForm.module.css';
 
+import { dateValidation } from './inputValidation/inputValidation.js';
+
 const RegisterForm = (props) => {
   const history = useHistory();
   const userNameInputRef = useRef();
@@ -18,6 +20,7 @@ const RegisterForm = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    setError(false);
 
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
@@ -32,15 +35,22 @@ const RegisterForm = (props) => {
 
     //Validation
     setIsLoading(true);
-    let url;
+
     const API_KEY = 'AIzaSyDmKuxhqvy2Gt55tZcWLmf4xmq1K7TBgpI';
+    let url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`;
 
-    url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`;
+    const errorMsg = dateValidation(enteredBirthday);
+    setError(errorMsg);
 
-    if (!enteredEmail || !enteredPassword) {
+    if (errorMsg) {
+      setIsLoading(false);
+      return;
+    } else if (!enteredEmail || !enteredPassword || !enteredName || !enteredBirthday) {
       setError('Please fill all fields');
       setIsLoading(false);
-      console.log(props.onPassUid);
+    } else if (enteredName.length < 10) {
+      setError('Username must contain at least 10 characters');
+      setIsLoading(false);
     } else {
       fetch(url, {
         method: 'POST',
@@ -75,6 +85,7 @@ const RegisterForm = (props) => {
 
                   default:
                     setError('Registration failed');
+                    break;
                 }
               }
 
@@ -90,7 +101,7 @@ const RegisterForm = (props) => {
           profileSetupHandler(data.localId, user);
         })
         .catch((err) => {
-          console.log(err.message);
+          /* console.log(err.message); */
         });
     }
   };
@@ -106,16 +117,7 @@ const RegisterForm = (props) => {
         },
       }
     );
-    /*  await fetch(
-      `https://make-a-wish-2c068-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`,
-      {
-        method: 'POST',
-        body: JSON.stringify(user),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    ); */
+
     /* const data = await response.json(); */
   }
 
@@ -136,7 +138,15 @@ const RegisterForm = (props) => {
           </div>
           <div className={classes.control}>
             <label htmlFor="dob">Birthday</label>
-            <input type="date" id="dob" required ref={birthdayInputRef} />
+            <input
+              type="date"
+              id="dob"
+              min="1930-01-01"
+              max={new Date().toISOString().split('T')[0]}
+              defaultValue={new Date().toISOString().split('T')[0]}
+              required
+              ref={birthdayInputRef}
+            />
           </div>
           <div className={classes.control}>
             <label htmlFor="password">Password</label>
@@ -149,7 +159,7 @@ const RegisterForm = (props) => {
                   <button type="submit">Sign Up</button>
                 </Link>
                 <Link to="/login">
-                  <button type="submit">Cancel</button>
+                  <button type="button">Cancel</button>
                 </Link>
               </div>
             }
