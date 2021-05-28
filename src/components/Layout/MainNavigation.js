@@ -16,7 +16,7 @@ const MainNavigation = () => {
     <header>
       <nav className={'navigation'}>
         <ul>
-          <li>{isLoggedIn && <Link to="my_wishlist">My Wishes</Link>}</li>
+          <li>{isLoggedIn && <Link to="my_wishlist">Wishlist</Link>}</li>
           {/*           <li>{isLoggedIn && <Link to="friendList"> Friends</Link>}</li> */}
           <li>{isLoggedIn && <Link to="profile"> Profile</Link>}</li>
           <li>
@@ -27,7 +27,6 @@ const MainNavigation = () => {
             )}
           </li>
         </ul>
-        <hr />
       </nav>
     </header>
   );
