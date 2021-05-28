@@ -1,8 +1,7 @@
 {
-  "homepage": "https://Matthiaskaesch.github.io/make_a_wish",
   "name": "wishlist",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "public": "build",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -18,8 +17,6 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
