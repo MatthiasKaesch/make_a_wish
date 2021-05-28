@@ -1,7 +1,7 @@
 import classes from './WishList.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash, faPlus } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import AddButton from './AddButton/AddButton';
 
 const WishList = (props) => {
   let i = 0;
@@ -28,11 +28,7 @@ const WishList = (props) => {
             </li>
           );
         })}
-        <li className={classes.newWish}>
-          <Link to="new_wish">
-            <FontAwesomeIcon className={classes.trashBinIcon} icon={faPlus} />
-          </Link>
-        </li>
+        <AddButton />
       </ul>
     );
   } else {
@@ -40,13 +36,7 @@ const WishList = (props) => {
       <div className={classes.wishList}>
         <p>No wishes yet. </p>
         <p>Click the + Button to add your first one.</p>
-        <ul>
-          <li className={classes.newWish}>
-            <Link to="new_wish">
-              <FontAwesomeIcon className={classes.trashBinIcon} icon={faPlus} />
-            </Link>
-          </li>
-        </ul>
+        <AddButton />
       </div>
     );
   }

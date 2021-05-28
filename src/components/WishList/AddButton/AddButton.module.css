@@ -1,0 +1,28 @@
+.newWish {
+  background-color: #044862;
+  width: 10%;
+  margin: 0.25em auto;
+  padding: 0.25em;
+  text-align: center;
+  font-size: 3em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border: 0.02em solid #044862;
+  border-radius: 0.125em;
+}
+
+.newWish > a {
+  color: white;
+}
+
+.newWish:hover,
+.newWish:focus {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  background-color: #ffd972;
+  color: #044862;
+  border-color: #f07d19;
+}
+
+.newWish:hover > a,
+.newWish:focus > a {
+  color: #044862;
+}

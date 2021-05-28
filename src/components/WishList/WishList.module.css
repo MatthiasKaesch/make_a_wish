@@ -17,7 +17,7 @@
   padding-bottom: 2em;
 }
 
-li {
+.wishList li {
   width: 85%;
   background-color: white;
   list-style: none;
@@ -27,8 +27,8 @@ li {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 
-li:hover,
-li:focus {
+.wishList li:hover,
+.wishList li:focus {
   background-image: linear-gradient(white, white, #ffd9726c);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
