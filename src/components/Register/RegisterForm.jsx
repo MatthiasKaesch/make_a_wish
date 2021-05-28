@@ -18,6 +18,8 @@ const RegisterForm = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
 
+  const minChars = 6;
+
   const submitHandler = (event) => {
     event.preventDefault();
     setError(false);
@@ -48,8 +50,8 @@ const RegisterForm = (props) => {
     } else if (!enteredEmail || !enteredPassword || !enteredName || !enteredBirthday) {
       setError('Please fill all fields');
       setIsLoading(false);
-    } else if (enteredName.length < 10) {
-      setError('Username must contain at least 10 characters');
+    } else if (enteredName.length < minChars) {
+      setError(`Username must contain at least ${minChars} characters`);
       setIsLoading(false);
     } else {
       fetch(url, {
