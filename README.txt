@@ -7,34 +7,42 @@ A very simple App with following features:
 ////////////// MUST HAVE:
 
 Nav:
--- My Wishlist
--- Friends Wishes
--- Profile / Friends
--- Logout
+-- Wishlist --------------------done
+-- Friends --------------------OPEN!!!
+-- Profile / Friends --------------------done  
+-- Logout --------------------done
 
-Auth:
--- Create Account --------------------done
+Register:
+-- Set Username --------------------done
 -- <Validate Input> --------------------done
--- Login with Account --------------------done
+-- Set Email --------------------done
+-- <Validate Input> --------------------done
+-- Set Birthday --------------------done
+-- <Validate Input> --------------------done
+-- Set Password --------------------done
 -- <Validate Input> --------------------done
 -- Add user profile in DB --------------------done
 
+Auth:
+-- Login with Account --------------------done
+-- <Validate Input> --------------------done
+
 Profile:
--- See User Profile and UserID --------------------done
--- Copy UserID --> UI --------------------open
--- Change Password --------------------open
--- <Validate Input> --------------------open
+-- Profile and UserID Page --------------------done
+-- Copy UserID --> UI --------------------OPEN!!!
+-- Change Password --------------------OPEN!!!
+-- <Validate Input> --------------------OPEN!!!
 
 Wishlist:
 -- Create wishes --------------------done
--- <Validate Input> --------------------open
--- Edit Wishes --------------------open
--- <Validate Input> --------------------open
+-- <Validate Input> --------------------OPEN!!!
+-- Edit Wishes --------------------OPEN!!!
+-- <Validate Input> --------------------OPEN!!!
 
-Friends: ///////////////------------OPEN
--- Add Friends by UserID
--- See friends wishes
--- <Validate Input>
+Friends: --------------------OPEN COMPONENT!!!
+-- Add Friends by UserID --------------------OPEN!!!
+-- <Validate Input> --------------------OPEN!!!
+-- See friends wishes --------------------OPEN!!!
 
 PublishedWish:
 -- See other users whith same public wishes
@@ -46,7 +54,9 @@ PublishedWish:
 
 Friends:
 -- Comment Friends wishes
+-- <Validate Input>
 
 Wishlist:
 -- Edit Wishes
+-- <Validate Input>
 -- Sort wishes (Drag&Drop)
