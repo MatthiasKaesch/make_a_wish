@@ -102,10 +102,11 @@ const RegisterForm = (props) => {
           history.replace('/my_wishlist');
           profileSetupHandler(data.localId, user);
 
-          let userEntry = {};
-          userEntry[user.name] = data.localId;
+          let userEntry = {
+            name: user.name,
+            uId: data.localId,
+          };
 
-          console.log(userEntry);
           addUserEntryHandler(user.name, userEntry);
         })
         .catch((err) => {
