@@ -1,0 +1,33 @@
+.backButton {
+  margin-left: 77%;
+  font-size: 1.5em;
+}
+
+.backButton {
+  margin-top: 1em;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  color: white;
+  background-color: #044862;
+  border: 1px solid #044862;
+  border-radius: 0.25em;
+  padding: 0.75rem 2.5rem;
+}
+.backButton:hover {
+  color: #044862;
+  background-color: #ffd972;
+  border-color: #f07d19;
+}
+
+@media (max-width: 1100px) {
+  .backButton {
+    margin-left: 72%;
+  }
+}
+
+@media (max-width: 400px) {
+  .backButton {
+    margin-left: 75%;
+  }
+}
