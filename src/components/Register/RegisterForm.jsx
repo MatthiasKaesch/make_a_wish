@@ -101,6 +101,12 @@ const RegisterForm = (props) => {
           authCtx.login(data.idToken);
           history.replace('/my_wishlist');
           profileSetupHandler(data.localId, user);
+
+          let userEntry = {};
+          userEntry[user.name] = data.localId;
+
+          console.log(userEntry);
+          addUserEntryHandler(user.name, userEntry);
         })
         .catch((err) => {
           /* console.log(err.message); */
@@ -121,6 +127,19 @@ const RegisterForm = (props) => {
     );
 
     /* const data = await response.json(); */
+  }
+
+  async function addUserEntryHandler(userName, userEntry, method) {
+    await fetch(
+      `https://make-a-wish-2c068-default-rtdb.europe-west1.firebasedatabase.app/users/${userName}.json`,
+      {
+        method: 'PUT',
+        body: JSON.stringify(userEntry),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
   }
 
   return (
