@@ -20,12 +20,13 @@
   text-align: center;
   background-color: #a6c9b7;
 }
+
 .navigation > ul > li:hover,
 .navigation > ul > li:focus {
   background-color: #66a182;
 }
 
-.navigation > ul > li:hover > a {
+.navigation > ul > li > a:hover {
   color: #ffd972;
 }
 
@@ -37,6 +38,18 @@
   font-weight: bold;
   font-size: 1.5em;
   text-decoration: none;
+}
+.logoutButton {
+  max-width: 10%;
+}
+.logoutButton > a {
+  background-color: #ebf2fa;
+  color: #f07d19;
+}
+
+.logoutButton > a:hover,
+.logoutButton > a:focus {
+  background-color: #66a182;
 }
 
 @media only screen and (max-width: 640px) {
