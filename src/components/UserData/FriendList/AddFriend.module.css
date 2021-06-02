@@ -1,9 +1,22 @@
-.toggleButton {
-  color: black;
+.toggleButton,
+.searchUser {
+  display: block;
+  width: 40%;
+  margin: 1em auto;
 }
-.addFriendInput {
-  color: black;
+
+.searchUser > input {
+  display: block;
+  width: 96%;
+  margin: 0.5em auto;
+  padding: 0.25em;
+  font-size: 1em;
 }
+
 .searchButton {
-  color: black;
+  display: block;
+  font-size: 1.25em;
+  font-weight: bold;
+  width: 60%;
+  margin: 2em auto;
 }

@@ -29,23 +29,6 @@
 .privacyButton {
   display: block;
   width: 8em;
-  margin: 0 auto;
+  margin: 1em auto;
   font-size: 1.25em;
-}
-
-.profile button {
-  margin-top: 1em;
-  cursor: pointer;
-  font: inherit;
-  font-weight: 600;
-  color: white;
-  background-color: #044862;
-  border: 1px solid #044862;
-  border-radius: 0.25em;
-  padding: 0.75rem 2.5rem;
-}
-.profile button:hover {
-  color: #044862;
-  background-color: #ffd972;
-  border-color: #f07d19;
 }
