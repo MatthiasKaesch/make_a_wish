@@ -4,8 +4,7 @@
 }
 
 .app {
-  max-width: 960px;
-  width: 80%;
+  width: 65%;
   margin: 0 auto;
 }
 
@@ -32,8 +31,31 @@ h1 {
   background-clip: text;
 }
 
+h2,
+h3 {
+  text-align: center;
+  margin: 0.5em 0;
+  color: #044862;
+}
+
 h1 > span {
   font-weight: 600;
+}
+
+section {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em 0;
+  color: rgb(25, 25, 25);
+  background-color: #ebf2fa;
+  border-radius: 6px;
+  border: 4px double #427aa1;
+}
+
+hr {
+  color: rgba(4, 71, 98, 0.4);
+  width: 90%;
+  margin: 2em auto;
 }
 
 .buttons {
@@ -74,17 +96,20 @@ footer {
   font-size: 1.25em;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 824px) {
   html {
     font-size: 0.8em;
   }
-
   .app {
     width: 100%;
   }
 
+  section {
+    width: 97%;
+  }
+
   hr {
-    display: none;
+    margin: 1em auto;
   }
 
   label {
@@ -101,9 +126,9 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 530px) {
   html {
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
 }
 
@@ -116,9 +141,6 @@ footer {
   }
   h2 {
     font-size: 3em;
-  }
-  button {
-    color: red;
   }
 }
 

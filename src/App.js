@@ -4,8 +4,9 @@ import classes from './App.module.css';
 
 import Auth from './components/Auth/AuthForm';
 import Register from './components/Register/RegisterForm.jsx';
-import Profile from './components/Profile/Profile'; /* 
-import FriendList from './components/FriendList/FriendList'; */
+import Profile from './components/UserData/Profile/Profile';
+import FriendList from './components/UserData/FriendList/FriendList';
+import AddFriend from './components/UserData/FriendList/AddFriend';
 
 const MainNavigation = React.lazy(() => import('./components/Layout/MainNavigation'));
 const WishList = React.lazy(() => import('./components/WishList/WishList'));
@@ -16,8 +17,7 @@ function App() {
   const [error, setError] = useState(null);
   const [wishes, setWishes] = useState([]);
   const [uid, setUid] = useState('');
-
-  /*   const [friends, setFriends] = useState([{ name: '' }]); */
+  const [friends, setFriends] = useState(['']);
 
   const onPassUidHandler = (fetchedUid) => {
     setUid(fetchedUid);
@@ -94,6 +94,10 @@ function App() {
           <Redirect to="/login" />
         </Route>
         <Suspense fallback={<p>Loading...</p>}>
+          <Route path="/addFriend">
+            <MainNavigation />
+            <AddFriend />
+          </Route>
           <Route path="/login">
             <Auth onPassUid={onPassUidHandler} />
           </Route>
@@ -101,10 +105,10 @@ function App() {
             <MainNavigation />
             <Profile uid={uid} />
           </Route>
-          {/*  <Route path="/friendList">
+          <Route path="/friendList">
             <MainNavigation />
             <FriendList friends={friends} />
-          </Route> */}
+          </Route>
           <Route path="/register">
             <Register onPassUid={onPassUidHandler} />
           </Route>
