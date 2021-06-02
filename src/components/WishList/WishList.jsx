@@ -8,28 +8,30 @@ const WishList = (props) => {
   let html;
   if (props.wishes.length !== 0) {
     html = (
-      <ul className={classes.wishList}>
-        {props.wishes.map((wish) => {
-          i++;
-          return (
-            <li key={wish.id} id={wish.id} className={classes.wishElement}>
-              <div>
-                <p>
-                  <b>
-                    {i}. {wish.title}
-                  </b>
-                </p>
-                <p> {wish.price} €</p>
-                <p> Public to: {wish.friendList}</p>
-              </div>
-              <button onClick={props.onRemoveWish} className={classes.deleteButton}>
-                <FontAwesomeIcon className={classes.trashBinIcon} icon={faTrash} />
-              </button>
-            </li>
-          );
-        })}
-        <AddButton />
-      </ul>
+      <section className={classes.container}>
+        <ul>
+          {props.wishes.map((wish) => {
+            i++;
+            return (
+              <li key={wish.id} id={wish.id} className={classes.wishElement}>
+                <div>
+                  <p>
+                    <b>
+                      {i}. {wish.title}
+                    </b>
+                  </p>
+                  <p> {wish.price} €</p>
+                  <p> Public to: {wish.friendList}</p>
+                </div>
+                <button onClick={props.onRemoveWish} className={classes.deleteButton}>
+                  <FontAwesomeIcon className={classes.trashBinIcon} icon={faTrash} />
+                </button>
+              </li>
+            );
+          })}
+          <AddButton />
+        </ul>
+      </section>
     );
   } else {
     html = (
