@@ -1,0 +1,51 @@
+.profile > p {
+  display: block;
+  width: 50%;
+  margin: 0.5em auto;
+}
+
+.userData {
+  font-weight: 600;
+}
+
+.show {
+  display: block;
+  text-align: center;
+  min-height: 1.25em;
+  margin-top: 1em;
+  font-weight: 600;
+  color: rgb(156, 1, 1);
+}
+
+.hide {
+  display: block;
+  text-align: center;
+  min-height: 1.25em;
+  margin-top: 1em;
+  font-weight: 600;
+  color: rgb(25, 25, 25);
+}
+
+.privacyButton {
+  display: block;
+  width: 8em;
+  margin: 0 auto;
+  font-size: 1.25em;
+}
+
+.profile button {
+  margin-top: 1em;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  color: white;
+  background-color: #044862;
+  border: 1px solid #044862;
+  border-radius: 0.25em;
+  padding: 0.75rem 2.5rem;
+}
+.profile button:hover {
+  color: #044862;
+  background-color: #ffd972;
+  border-color: #f07d19;
+}
