@@ -1,0 +1,24 @@
+.dissmissButton {
+  width: 5em;
+  height: 5em;
+  background-color: #044862;
+  border-radius: 0.5em;
+  border: 1px solid #044862;
+  margin: auto 0;
+  padding: 1em;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.dissmissButton:hover,
+.dissmissButton:focus {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  background-color: #ffd972;
+  color: #044862;
+  border-color: #f07d19;
+}
+
+.trashBinIcon {
+  pointer-events: none;
+  font-size: 3em;
+}
