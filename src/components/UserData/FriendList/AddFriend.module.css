@@ -2,21 +2,52 @@
 .searchUser {
   display: block;
   width: 40%;
-  margin: 1em auto;
+  margin: 1rem auto;
 }
 
 .searchUser > input {
   display: block;
   width: 96%;
-  margin: 0.5em auto;
-  padding: 0.25em;
-  font-size: 1em;
+  margin: 0.5rem auto;
+  padding: 0.25rem;
+  font-size: 1rem;
 }
 
 .searchButton {
   display: block;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   font-weight: bold;
-  width: 60%;
-  margin: 2em auto;
+  width: 30%;
+  margin: 2rem auto;
+  padding: 0.5rem 0;
+}
+
+.userContainer {
+  background-color: #ffd972;
+  width: 40%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: 4px double #f07d19;
+  display: flex;
+  justify-content: space-evenly;
+}
+.userContainer > h3 {
+  font-size: 2rem;
+  margin: 0.25rem 0;
+}
+
+.userContainer > button {
+  font-size: 2rem;
+  margin: 0 0 0 2rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 1.55em;
+  min-height: 1em;
+  max-height: 1em;
+  text-align: center;
 }
