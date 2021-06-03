@@ -96,7 +96,7 @@ function App() {
         <Suspense fallback={<p>Loading...</p>}>
           <Route path="/addFriend">
             <MainNavigation />
-            <AddFriend />
+            <AddFriend uid={uid} />
           </Route>
           <Route path="/login">
             <Auth onPassUid={onPassUidHandler} />
