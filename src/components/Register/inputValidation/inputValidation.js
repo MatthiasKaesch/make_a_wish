@@ -31,10 +31,10 @@ export const dateValidation = (date) => {
   } else if (enteredYear > currentYear) {
     error = 'Year cant be ahead of ' + currentYear;
     return error;
-  } else if (enteredMonth > currentMonth) {
+  } else if (enteredYear > currentYear && enteredMonth > currentMonth) {
     error = 'Month cant be ahead of ' + monthNames[currentMonth - 1] + currentYear;
     return error;
-  } else if (enteredDay > currentDay && enteredMonth >= currentMonth) {
+  } else if (enteredYear > currentYear && enteredDay > currentDay && enteredMonth >= currentMonth) {
     error = 'Date is in the future. Please check your entered Day!';
     return error;
   } else {
