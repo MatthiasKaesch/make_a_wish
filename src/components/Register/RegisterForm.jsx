@@ -18,7 +18,7 @@ const RegisterForm = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  const minChars = 6;
+  const minChars = 4;
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -80,17 +80,14 @@ const RegisterForm = (props) => {
                   case 'EMAIL_EXISTS':
                     setError('Email is already in use');
                     break;
-
                   case 'INVALID_EMAIL':
                     setError(`${enteredEmail} is not a valid Email`);
                     break;
-
                   default:
                     setError('Registration failed');
                     break;
                 }
               }
-
               throw new Error(error);
             });
           }
@@ -100,14 +97,14 @@ const RegisterForm = (props) => {
           props.onPassUid(data.localId);
           authCtx.login(data.idToken);
           history.replace('/my_wishlist');
-          profileSetupHandler(data.localId, user);
 
           let userEntry = {
             name: user.name,
-            uId: data.localId,
+            birthday: enteredBirthday,
+            email: enteredEmail,
           };
 
-          addUserEntryHandler(user.name, userEntry);
+          addUserEntryHandler(userEntry, data.localId);
         })
         .catch((err) => {
           /* console.log(err.message); */
@@ -115,24 +112,9 @@ const RegisterForm = (props) => {
     }
   };
 
-  async function profileSetupHandler(uid, user) {
+  async function addUserEntryHandler(userEntry, uid) {
     await fetch(
-      `https://make-a-wish-2c068-default-rtdb.europe-west1.firebasedatabase.app/${uid}/profile.json`,
-      {
-        method: 'POST',
-        body: JSON.stringify(user),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    );
-
-    /* const data = await response.json(); */
-  }
-
-  async function addUserEntryHandler(userName, userEntry, method) {
-    await fetch(
-      `https://make-a-wish-2c068-default-rtdb.europe-west1.firebasedatabase.app/users/${userName}.json`,
+      `https://make-a-wish-2c068-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`,
       {
         method: 'PUT',
         body: JSON.stringify(userEntry),
