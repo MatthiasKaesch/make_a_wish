@@ -15,7 +15,7 @@ const Profile = (props) => {
       setError(null); */
       try {
         const response = await fetch(
-          `https://make-a-wish-2c068-default-rtdb.europe-west1.firebasedatabase.app/${props.uid}/profile.json`
+          `https://make-a-wish-2c068-default-rtdb.europe-west1.firebasedatabase.app/users/${props.uid}.json`
         );
         if (!response.ok) {
           throw new Error('Something went wrong!');
@@ -24,14 +24,12 @@ const Profile = (props) => {
 
         const fetchedProfile = [];
 
-        for (const key in data) {
-          fetchedProfile.push({
-            name: data[key].name,
-            dob: data[key].dob,
-            email: data[key].email,
-          });
-          setProfile(fetchedProfile);
-        }
+        fetchedProfile.push({
+          name: data.name,
+          dob: data.birthday,
+          email: data.email,
+        });
+        setProfile(fetchedProfile);
       } catch (error) {
         /*      setError(error.message); */
       }
