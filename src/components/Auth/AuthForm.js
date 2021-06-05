@@ -27,11 +27,7 @@ const AuthForm = (props) => {
     let url;
     const API_KEY = 'AIzaSyDmKuxhqvy2Gt55tZcWLmf4xmq1K7TBgpI';
 
-    /*  if (isLogin) { */
     url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`;
-    /*  } else {
-      url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`;
-    } */
 
     if (!enteredEmail || !enteredPassword) {
       setError('Please fill all fields');
@@ -84,7 +80,7 @@ const AuthForm = (props) => {
           }
         })
         .then((data) => {
-          /* console.log(data); */
+          console.log(data);
           authCtx.login(data.idToken);
           props.onPassUid(data.localId);
           history.replace('/my_wishlist');

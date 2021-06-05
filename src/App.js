@@ -29,7 +29,7 @@ function App() {
       setError(null);
       try {
         const response = await fetch(
-          `https://make-a-wish-2c068-default-rtdb.europe-west1.firebasedatabase.app/${uid}/wishes.json`
+          `https://make-a-wish-2c068-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}/wishes.json`
         );
         if (!response.ok) {
           throw new Error('Something went wrong!');
@@ -61,7 +61,7 @@ function App() {
 
   async function wishAddHandler(wish) {
     await fetch(
-      `https://make-a-wish-2c068-default-rtdb.europe-west1.firebasedatabase.app/${uid}/wishes.json`,
+      `https://make-a-wish-2c068-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}/wishes.json`,
       {
         method: 'POST',
         body: JSON.stringify(wish),
@@ -76,7 +76,7 @@ function App() {
 
   async function wishDeleteHandler(event) {
     const id = event.target.parentNode.id;
-    const URL = `https://make-a-wish-2c068-default-rtdb.europe-west1.firebasedatabase.app/${uid}/wishes/${id}.json`;
+    const URL = `https://make-a-wish-2c068-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}/wishes/${id}.json`;
     await fetch(URL, {
       method: 'DELETE',
       headers: {
