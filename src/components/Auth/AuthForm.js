@@ -5,6 +5,8 @@ import Spinner from '../Spinner/Spinner';
 import AuthContext from '../../store/auth-context';
 import classes from './AuthForm.module.css';
 
+import API_KEY from '../../ApiKey.js';
+
 const AuthForm = (props) => {
   const history = useHistory();
   const emailInputRef = useRef();
@@ -25,7 +27,6 @@ const AuthForm = (props) => {
     //Validation
     setIsLoading(true);
     let url;
-    const API_KEY = 'AIzaSyDmKuxhqvy2Gt55tZcWLmf4xmq1K7TBgpI';
 
     url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`;
 
